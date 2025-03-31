@@ -1,0 +1,47 @@
+/* This is a simple example of how to create a simple animation using CSS keyframes. */
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* The body and html elements are set to 100% height and width to make sure the animation covers the entire screen. */
+html, body
+{
+    height: 100%;
+    width: 100%;
+    background-color: #121212;
+    overflow: hidden;
+}
+
+/* The span element is used to create the animated object. */
+span
+{
+    background-image: url("https://cdn-icons-png.flaticon.com/128/8236/8236748.png");
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    pointer-events: none;
+    background-size: cover;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-repeat: no-repeat;
+    animation: animate 6s linear ;
+ 
+}
+
+/* The keyframes are used to define the animation. */
+@keyframes animate {
+    0% {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -5000%);
+        opacity: 0;
+        filter: hue-rotate(720deg);
+    }
+}
